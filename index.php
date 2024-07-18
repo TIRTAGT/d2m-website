@@ -31,13 +31,13 @@ $db = new D2M_Database();
 						<div class="left-content">
 							<div class="thumb">
 								<div class="inner-content">
-									<h4>We Are <b>D2M</b></h4>
-									<span>Awesome, clean &amp; creative HTML5 Template</span>
-									<div class="main-border-button">
-										<a href="#">Purchase Now!</a>
+									<h4>Welcome to <b>D2M</b></h4>
+									<span>Discover the Ultimate Cosplay Costume Destinations!<br>Explore top-notch shops and find the perfect outfit to bring your favorite characters to life.</span>
+									<div class="main-white-button scroll-to-section">
+										<a href="#explore">Discover More</a>
 									</div>
 								</div>
-								<img src="assets/images/baner-right-image-01.jpg" alt="" height="829px">
+								<img src="assets/images/background company.png" alt="" height="829px">
 							</div>
 						</div>
 					</div>
@@ -49,12 +49,12 @@ $db = new D2M_Database();
 									<div class="right-first-image">
 										<div class="thumb">
 											<div class="inner-content">
-												<h4>Wig</h4>
-												<span>Best Wig</span>
+												<h4>Wigs</h4>
+												<span>Find your favorite character wigs here!</span>
 											</div>
 											<div class="hover-content">
 												<div class="inner">
-													<h4>Wig</h4>
+													<h4>Wigs</h4>
 													<p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
 													<div class="main-border-button">
 														<a href="#">Discover More</a>
@@ -70,12 +70,12 @@ $db = new D2M_Database();
 									<div class="right-first-image">
 										<div class="thumb">
 											<div class="inner-content">
-												<h4>Kostum</h4>
-												<span>Best Kostum</span>
+												<h4>Costume</h4>
+												<span>Find your favorite character's costume here!</span>
 											</div>
 											<div class="hover-content">
 												<div class="inner">
-													<h4>Kostum</h4>
+													<h4>Costume</h4>
 													<p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
 													<div class="main-border-button">
 														<a href="#">Discover More</a>
@@ -91,12 +91,12 @@ $db = new D2M_Database();
 									<div class="right-first-image">
 										<div class="thumb">
 											<div class="inner-content">
-												<h4>Accesories</h4>
-												<span>Best Cosplay Accesories</span>
+												<h4>Accessories</h4>
+												<span>Find your favorite character accessories here!</span>
 											</div>
 											<div class="hover-content">
 												<div class="inner">
-													<h4>Accesories</h4>
+													<h4>Accessories</h4>
 													<p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
 													<div class="main-border-button">
 														<a href="#">Discover More</a>
@@ -142,8 +142,8 @@ $db = new D2M_Database();
 				<div class="row">
 					<div class="col-lg-6">
 						<div class="section-heading">
-							<h2>Latest Costum</h2>
-							<span>Details to details is what makes D2M different from the other themes.</span>
+							<h2>Latest Costume</h2>
+							<span>List of your favorite character's latest costumes here.</span>
 						</div>
 					</div>
 				</div>
@@ -155,7 +155,7 @@ $db = new D2M_Database();
 							<div class="owl-men-item owl-carousel">
 								<?php
 								
-								$data_costum = $db->SELECT_Product_Kostum();
+								$data_costum = $db->SELECT_Product_Costume();
 
 								foreach ($data_costum as $costum) {
 									$link_produk = "single-product.php?id=" . $costum['id'] . "&type=kostum";
@@ -180,7 +180,7 @@ $db = new D2M_Database();
 												<h4><?php echo $costum['name']; ?></h4>
 											</a>
 
-											<span>$<?php echo $costum['price']; ?></span>
+											<span>Rp. <?php echo $costum['price']; ?></span>
 
 											<ul class="stars">
 												<?php
@@ -200,7 +200,6 @@ $db = new D2M_Database();
 										</div>
 									</div>
 								<?php } ?>
-								
 							</div>
 						</div>
 					</div>
@@ -215,8 +214,8 @@ $db = new D2M_Database();
 				<div class="row">
 					<div class="col-lg-6">
 						<div class="section-heading">
-							<h2>Latest Wig</h2>
-							<span>Details to details is what makes D2M different from the other themes.</span>
+							<h2>Latest Wigs</h2>
+							<span>List of your favorite character's latest wigs here.</span>
 						</div>
 					</div>
 				</div>
@@ -226,98 +225,52 @@ $db = new D2M_Database();
 					<div class="col-lg-12">
 						<div class="women-item-carousel">
 							<div class="owl-women-item owl-carousel">
-								<div class="item">
-									<div class="thumb">
-										<div class="hover-content">
-											<ul>
-												<li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-												<li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-												<li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+							<?php
+								$data_wigs = $db->SELECT_Product_Wigs();
+
+								foreach ($data_wigs as $wig) {
+									$link_produk = "single-product.php?id=" . $wig['id'] . "&type=wig";
+									?>
+									<div class="item">
+										<div class="thumb">
+											<div class="hover-content">
+												<ul>
+													<li><a href="<?php echo $link_produk; ?>"><i class="fa fa-eye"></i></a></li>
+													<li><a href="<?php echo $link_produk; ?>"><i class="fa fa-star"></i></a></li>
+													<li><a href="<?php echo $link_produk; ?>"><i class="fa fa-shopping-cart"></i></a></li>
+												</ul>
+											</div>
+
+											<a href="<?php echo $link_produk; ?>">
+												<img src="<?php echo $wig['image']; ?>" alt="">
+											</a>
+										</div>
+
+										<div class="down-content">
+											<a href="<?php echo $link_produk; ?>">
+												<h4><?php echo $wig['name']; ?></h4>
+											</a>
+
+											<span>Rp. <?php echo $wig['price']; ?></span>
+
+											<ul class="stars">
+												<?php
+													$max_star = 5;
+													$target_star = $wig['star'];
+
+													for ($i = 0; $i < $target_star; $i++) { ?>
+														<li><i class="fa fa-star"></i></li>
+												<?php
+													}
+
+													for ($i = $target_star; $i < $max_star; $i++) { ?>
+														<li><i class="fa fa-star-o"></i></li>
+												<?php
+													} ?>
 											</ul>
 										</div>
-										<img src="assets/images/Kirara Wig.jfif" alt="">
 									</div>
-									<div class="down-content">
-										<h4>Kirara Wig</h4>
-										<span>$55.00</span>
-										<ul class="stars">
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-										</ul>
-									</div>
-								</div>
-								<div class="item">
-									<div class="thumb">
-										<div class="hover-content">
-											<ul>
-												<li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-												<li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-												<li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
-											</ul>
-										</div>
-										<img src="assets/images/Kazha Wig.jpg" alt="">
-									</div>
-									<div class="down-content">
-										<h4>Kazuha Wig</h4>
-										<span>$65.00</span>
-										<ul class="stars">
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-										</ul>
-									</div>
-								</div>
-								<div class="item">
-									<div class="thumb">
-										<div class="hover-content">
-											<ul>
-												<li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-												<li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-												<li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
-											</ul>
-										</div>
-										<img src="assets/images/Miku Wig.webp" alt="">
-									</div>
-									<div class="down-content">
-										<h4>Miku Wig Vampire Model</h4>
-										<span>$60.00</span>
-										<ul class="stars">
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-										</ul>
-									</div>
-								</div>
-								<div class="item">
-									<div class="thumb">
-										<div class="hover-content">
-											<ul>
-												<li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-												<li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-												<li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
-											</ul>
-										</div>
-										<img src="assets/images/Wig Mitaka Asa.jpg" alt="">
-									</div>
-									<div class="down-content">
-										<h4>Mitaka Asa Wig</h4>
-										<span>$50.00</span>
-										<ul class="stars">
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-										</ul>
-									</div>
-								</div>
+								<?php } ?>
 							</div>
 						</div>
 					</div>
@@ -332,8 +285,8 @@ $db = new D2M_Database();
 				<div class="row">
 					<div class="col-lg-6">
 						<div class="section-heading">
-							<h2>Latest Accesories</h2>
-							<span>Details to details is what makes D2M different from the other themes.</span>
+							<h2>Latest Accessories</h2>
+							<span>List of your favorite character's latest accessories here.</span>
 						</div>
 					</div>
 				</div>
@@ -449,7 +402,7 @@ $db = new D2M_Database();
 				<div class="row">
 					<div class="col-lg-6">
 						<div class="left-content">
-							<h2>Explore Our Products</h2>
+							<h2>Explore Our Sponsors</h2>
 							<span>You are allowed to use this D2M HTML CSS template. You can feel free to modify or edit this layout. You can convert this template as any kind of ecommerce CMS theme as you wish.</span>
 							<div class="quote">
 								<i class="fa fa-quote-left"></i><p>You are not allowed to redistribute this template ZIP file on any other website.</p>

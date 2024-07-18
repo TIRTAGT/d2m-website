@@ -16,7 +16,10 @@ if ($product_id == null || $product_type == null) {
 }
 
 if ($product_type == 'kostum') {
-	$product = $db->SELECT_Product_Kostum($product_id);
+	$product = $db->SELECT_Product_Costume($product_id);
+}
+else if ($product_type == 'wig') {
+	$product = $db->SELECT_Product_Wigs($product_id);
 }
 else {
 	die('Invalid product type');
@@ -62,8 +65,6 @@ if ($product == null) {
 					<div class="col-lg-4">
 						<div class="right-content">
 							<h4><?php echo $product['name']; ?></h4>
-							<span class="price">Rp. <?php echo $product['price']; ?></span>
-
 							<ul class="stars">
 								<?php
 									$max_star = 5;
@@ -79,15 +80,13 @@ if ($product == null) {
 								<?php
 									} ?>
 							</ul>
+							<br>
+							<span class="price">Rp. <?php echo $product['price']; ?></span>
 							<span><?php echo $product['description']; ?></span>
-							<!-- <div class="quote">
-								<i class="fa fa-quote-left"></i>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiuski smod.</p>
-							</div> -->
 
 							<div class="quantity-content">
 								<div class="left-content">
-									<h6>No. of Orders</h6>
+									<h6>Jumlah Order</h6>
 								</div>
 								<div class="right-content">
 									<div class="quantity buttons_added">
@@ -97,7 +96,10 @@ if ($product == null) {
 							</div>
 							<div class="total">
 								<h4><b>Total: Rp. <?php echo $product['price']; ?></b></h4>
-								<div class="main-border-button"><a href="#">Add To Cart</a></div>
+								<br>
+								<br>
+								<br>
+								<div class="main-border-button"><a href="#">Tambah ke keranjang</a></div>
 							</div>
 						</div>
 					</div>

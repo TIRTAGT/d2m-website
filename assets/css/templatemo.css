@@ -1760,7 +1760,7 @@ Single Product Page
 }
 
 #product .right-content ul.stars {
-  position: absolute;
+  /* position: absolute; */
   right: 0;
   top: 0;
 }
@@ -1836,10 +1836,6 @@ Single Product Page
   font-size: 20px;
   margin-top: 10px;
   color: #aaa!important;
-}
-
-.total .main-border-button {
-  text-align: right;
 }
 
 .total .main-border-button a {
