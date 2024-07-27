@@ -50,12 +50,11 @@ $db = new D2M_Database();
 										<div class="thumb">
 											<div class="inner-content">
 												<h4>Wigs</h4>
-												<span>Find your favorite character wigs here!</span>
 											</div>
 											<div class="hover-content">
 												<div class="inner">
 													<h4>Wigs</h4>
-													<p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+													<p>Find your favorite character wigs here!</p>
 													<div class="main-border-button">
 														<a href="#">Discover More</a>
 													</div>
@@ -71,18 +70,17 @@ $db = new D2M_Database();
 										<div class="thumb">
 											<div class="inner-content">
 												<h4>Costume</h4>
-												<span>Find your favorite character's costume here!</span>
 											</div>
 											<div class="hover-content">
 												<div class="inner">
 													<h4>Costume</h4>
-													<p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+													<p>Find your favorite character's costume here!</p>
 													<div class="main-border-button">
 														<a href="#">Discover More</a>
 													</div>
 												</div>
 											</div>
-											<img src="assets/images/Furina.jfif">
+											<img src="assets/images/Nahida.jpg">
 										</div>
 									</div>
 								</div>
@@ -92,12 +90,11 @@ $db = new D2M_Database();
 										<div class="thumb">
 											<div class="inner-content">
 												<h4>Accessories</h4>
-												<span>Find your favorite character accessories here!</span>
 											</div>
 											<div class="hover-content">
 												<div class="inner">
 													<h4>Accessories</h4>
-													<p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+													<p>Find your favorite character accessories here!</p>
 													<div class="main-border-button">
 														<a href="#">Discover More</a>
 													</div>
@@ -113,12 +110,11 @@ $db = new D2M_Database();
 										<div class="thumb">
 											<div class="inner-content">
 												<h4>Our Collection</h4>
-												<span>Best Trend Cosplay Collection</span>
 											</div>
 											<div class="hover-content">
 												<div class="inner">
 													<h4>Our Collection</h4>
-													<p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+													<p>Best Trend Cosplay Collection</p>
 													<div class="main-border-button">
 														<a href="#">Discover More</a>
 													</div>
@@ -331,7 +327,7 @@ $db = new D2M_Database();
 										<img src="assets/images/Panah Yelan.webp" alt="">
 									</div>
 									<div class="down-content">
-										<h4>Aqua Simulcara-Yelan Bow</h4>
+										<h4>Aqua Simulcara Bow</h4>
 										<span>$150.00</span>
 										<ul class="stars">
 											<li><i class="fa fa-star"></i></li>

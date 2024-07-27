@@ -100,7 +100,7 @@ class D2M_Database {
 
 		$products[2] = array(
 			'id' => 3,
-			'name' => 'Miku Wigs Vampire Model',
+			'name' => 'Miku Wigs Vampire',
 			'description' => 'Miku Wigs Vampire Model Wigs',
 			'price' => 60000,
 			'star' => 5,
