@@ -695,7 +695,8 @@ banner
 }
 
 .main-banner .right-content .right-first-image .thumb img {
-  width: 100%;
+  width: 400px;
+  height: 400px;
   overflow: hidden;
 }
 
@@ -708,7 +709,7 @@ banner
 }
 
 .main-banner .right-content .right-first-image .thumb .inner-content h4 {
-  color: #fff;
+  color: black;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 15px;
@@ -716,16 +717,16 @@ banner
 
 .main-banner .right-content .right-first-image .thumb .inner-content span {
   font-size: 16px;
-  color: #fff;
+  color: black;
   font-style: italic;
 }
 
 .main-banner .right-content .right-first-image .thumb .hover-content {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  left: 15px;
-  bottom: 15px;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
   text-align: center;
   background-color: rgba(42,42,42,.97);
   opacity: 0;
@@ -1759,7 +1760,7 @@ Single Product Page
 }
 
 #product .right-content ul.stars {
-  position: absolute;
+  /* position: absolute; */
   right: 0;
   top: 0;
 }
@@ -1835,10 +1836,6 @@ Single Product Page
   font-size: 20px;
   margin-top: 10px;
   color: #aaa!important;
-}
-
-.total .main-border-button {
-  text-align: right;
 }
 
 .total .main-border-button a {
